@@ -10,6 +10,8 @@
 #ifndef COMPRESSION_GZ_H_0B410507_A88B_468B_A1EC_ABC8B9246F62
 #define COMPRESSION_GZ_H_0B410507_A88B_468B_A1EC_ABC8B9246F62
 
+#ifndef NO_ZLIB
+
 #if !defined(LIBKAFKAASIO_NO_COMPRESSION) \
  && !defined(LIBKAFKAASIO_NO_COMPRESSION_GZIP)
 
@@ -41,5 +43,6 @@ struct CompressionPolicy<constants::kCompressionGZIP>
 
 #include <libkafka_asio/detail/impl/compression_gz.h>
 
+#endif  // NO_ZLIP
 #endif  // GZIP compression not disabled?
 #endif  // COMPRESSION_GZ_H_0B410507_A88B_468B_A1EC_ABC8B9246F62
