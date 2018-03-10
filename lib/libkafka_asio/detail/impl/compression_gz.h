@@ -10,6 +10,7 @@
 #ifndef COMPRESSION_GZ_H_4936268F_C651_4E32_A917_8AC05247B3DB
 #define COMPRESSION_GZ_H_4936268F_C651_4E32_A917_8AC05247B3DB
 
+#ifndef NO_ZLIB
 #include <zlib.h>
 
 #include <algorithm>
@@ -123,4 +124,5 @@ inline Bytes GZIPCompressionAlgorithm::Decompress(
 }  // namespace detail
 }  // namespace libkafka_asio
 
+#endif  // NO_ZLIB
 #endif  // COMPRESSION_GZ_H_4936268F_C651_4E32_A917_8AC05247B3DB
